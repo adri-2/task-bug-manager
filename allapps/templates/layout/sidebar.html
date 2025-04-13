@@ -1,0 +1,44 @@
+<aside class="md:w-64 mb-10 md:mb-0">
+    <div class="bg-gray-800 p-4 rounded-2xl shadow-lg">
+      <img src="media\_image.webp" alt="Profile" class="w-40 h-40 mx-auto rounded-xl shadow border-4 border-gray-700 hover:scale-105 transition-transform duration-300">
+      <h2 class="text-center mt-4 font-bold text-lg">Lorem Ipsum</h2>
+      <p class="text-center text-gray-400 text-sm mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="flex justify-center gap-4 mt-4 text-xl">
+        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors"><i class="fab fa-github"></i></a>
+        <a href="#" class="text-gray-400 hover:text-green-400 transition-colors"><i class="fas fa-globe"></i></a>
+      </div>
+    </div>
+    
+    
+
+
+    <!-- Catégories -->
+    <div class="bg-gray-800 mt-6 p-4 rounded-2xl shadow">
+      <h3 class="font-semibold mb-2">📂 Categories</h3>
+      <ul class="space-y-1 text-sm">
+        {% for category in category_list %}
+        <li class="flex justify-between hover:text-white">
+            
+              
+          
+          <span>{{category.title}}</span><span class="bg-gray-700 rounded-full px-2">{{category.count}}</span>
+        </li>
+        <!-- <li class="flex justify-between hover:text-white">
+          <span>Guides</span><span class="bg-gray-700 rounded-full px-2">1</span>
+        </li> -->
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- Tags -->
+    <div class="bg-gray-800 mt-6 p-4 rounded-2xl shadow">
+      <h3 class="font-semibold mb-2">🏷️ Tags</h3>
+      <div class="flex flex-wrap gap-2 text-sm">
+        {% for category in category_list %}
+        <span class="bg-gray-700 px-2 py-1 rounded hover:bg-gray-600 transition">{{tag.title}}</span>
+        
+        {% endfor %}
+      </div>
+    </div>
+  </aside>
